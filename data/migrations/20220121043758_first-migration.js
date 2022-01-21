@@ -24,6 +24,7 @@ exports.up = async function(knex) {
                 .onDelete('RESTRICT')
                 .onUpdate('RESTRICT')
         })
+    // *************************** RESOURCE ASSIGNMENT TABLE STILL NEEDS TO BE BUILT *************************************
 };
 
 exports.down = async function(knex) {
