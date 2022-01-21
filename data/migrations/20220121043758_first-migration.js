@@ -21,8 +21,8 @@ exports.up = async function(knex) {
                 .notNullable()
                 .references('project_id')
                 .inTable('projects')
-                .onDelete('RESTRICT')
-                .onUpdate('RESTRICT')
+                .onDelete('CASCADE')
+                .onUpdate('CASCADE')
         })
     // *************************** RESOURCE ASSIGNMENT TABLE STILL NEEDS TO BE BUILT *************************************
 };

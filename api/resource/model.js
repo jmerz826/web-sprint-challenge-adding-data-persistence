@@ -1,7 +1,7 @@
 const db = require('../../data/dbConfig')
 
 const getById = function (id){
-    return db('resources').where('resource_id', id)
+    return db('resources').where('resource_id', id).first()
 }
 
 const getAll = () => {
