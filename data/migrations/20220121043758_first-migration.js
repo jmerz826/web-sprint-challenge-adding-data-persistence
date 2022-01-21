@@ -24,7 +24,6 @@ exports.up = async function(knex) {
                 .onDelete('CASCADE')
                 .onUpdate('CASCADE')
         })
-    // *************************** RESOURCE ASSIGNMENT TABLE STILL NEEDS TO BE BUILT *************************************
 };
 
 exports.down = async function(knex) {
@@ -32,4 +31,5 @@ exports.down = async function(knex) {
         .dropTableIfExists('projects')
         .dropTableIfExists('resources')
         .dropTableIfExists('tasks')
+        .dropTableIfExists('project_resources')
 };
