@@ -6,4 +6,14 @@ const getAll = () => {
         .select('t.*', 'p.project_name', 'p.project_description')
 }
 
-module.exports = {getAll}
+const getById = (id) => {
+    return db('tasks').where('task_id', id)
+}
+
+const create = async (newTask) => {
+    const [id] = await db('tasks').insert(newTask)
+
+    return getById(id)
+}
+
+module.exports = {getAll, getById, create}
